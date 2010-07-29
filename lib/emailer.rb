@@ -16,7 +16,11 @@ class Emailer
     @old_rev = old_rev
     @new_rev = new_rev
 
-    template = File.join(File.dirname(__FILE__), '/../template/email.html.erb')
+    if @config['template_file'] && File.exists?(@config['template_file'])
+        template = @config['template_file']
+    else
+        template = File.join(File.dirname(__FILE__), '/../template/email.html.erb')
+    end
     @html_message = TamTam.inline(:document => ERB.new(File.read(template)).result(binding))
   end
 

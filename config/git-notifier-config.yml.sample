@@ -34,6 +34,9 @@ sendmail_options:
   location: /usr/sbin/sendmail
   arguments: -i -t
 
+# use your own html template file
+template_file: hooks/git-commit-notifier_template.html.erb
+
 # commit message URL map
 message_map:
 #  '\brefs\s*\#(\d+)': 'http://example.com/redmine/issues/show/\1'
