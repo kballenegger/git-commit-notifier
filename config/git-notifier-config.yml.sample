@@ -37,6 +37,9 @@ sendmail_options:
 # use your own html template file
 template_file: hooks/git-commit-notifier_template.html.erb
 
+# use your own html template file
+stylesheet_file: hooks/git-commit-notifier_styles.css
+
 # commit message URL map
 message_map:
 #  '\brefs\s*\#(\d+)': 'http://example.com/redmine/issues/show/\1'

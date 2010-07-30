@@ -32,7 +32,11 @@ class Emailer
   end
 
   def stylesheet_string
-    stylesheet = File.join(File.dirname(__FILE__), '/../template/styles.css')
+      if @config['stylesheet_file'] && File.exists?(@config['stylesheet_file'])
+          stylesheet = @config['stylesheet_file']
+      else
+          stylesheet = File.join(File.dirname(__FILE__), '/../template/styles.css')
+      end
     File.read(stylesheet)
   end
 
