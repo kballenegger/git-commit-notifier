@@ -35,10 +35,12 @@ sendmail_options:
   arguments: -i -t
 
 # use your own html template file
-template_file: hooks/git-commit-notifier_template.html.erb
+template_file: hooks/azure.html.erb
+# this path is relative to where the .git directory (or the root, in a bare repo)
 
 # use your own html template file
-stylesheet_file: hooks/git-commit-notifier_styles.css
+stylesheet_file: hooks/azure.css
+# this path is relative to where the .git directory (or the root, in a bare repo)
 
 # commit message URL map
 message_map:
